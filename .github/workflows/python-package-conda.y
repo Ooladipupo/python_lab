@@ -1,7 +1,7 @@
-name: Bandit Security Scan
+#name: Bandit Security Scan
 
-on:
-  push:
+#on:
+# push:
     branches: [main]
   pull_request:
     branches: [main]
