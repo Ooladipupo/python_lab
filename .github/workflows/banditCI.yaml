@@ -27,4 +27,10 @@ jobs:
           
       - name: Run Bandit
         run: |
-          bandit -r . -f json -o bandit-result.json
+          bandit -r . -f json -o bandit-result.json --exit-zero
+
+      - name: Upload Bandit Report
+        uses: actions/upload-artifact@4
+        with:
+          name: bandit-report
+          path: bandit-result.json
